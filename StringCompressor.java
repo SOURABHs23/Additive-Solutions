@@ -37,7 +37,8 @@ public class StringCompressor {
 
             int count = Integer.parseInt(num.toString());
 
-            // If first time, skip the count
+         // If the count is already in the map, append the character to the existing string
+            // Otherwise, create a new string with the character
             map.putIfAbsent(count, new StringBuilder());
             map.get(count).append(currentChar);
 
